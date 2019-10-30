@@ -1,0 +1,39 @@
+{
+  "name": "ESPALIF",
+  "version": "1.0.0",
+  "description": "A build system for simple Single-Page-Applications.",
+  "main": "./gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swissarmybud/ESPALIF.git"
+  },
+  "author": "Andrew Porter <swissarmybud@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swissarmybud/ESPALIF/issues"
+  },
+  "homepage": "https://github.com/swissarmybud/ESPALIF",
+  "scripts": {
+    "build": "gulp build",
+    "make": "gulp make",
+    "clean": "gulp clean",
+    "serve": "node ./assets/server.js"
+  },
+  "devDependencies": {
+    "gulp-load-plugins": "~1.5.0",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-size": "~3.0.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-tap": "^1.0.1"
+  },
+  "dependencies": {
+    "gulp-jshint": "^2.1.0",
+    "jshint": "^2.10.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "frameworks":{
+    "normalize": "normalize_v8",
+    "style": "skeleton",
+    "javascript": "microCash"
+  },
+  "directories":{
+    "source": "src",
+    "build": "dist",
+    "frameworks": "frameworks",
+    "static": "static"
+  }
+}

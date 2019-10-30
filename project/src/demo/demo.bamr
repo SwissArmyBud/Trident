@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- --><style>
+      @@include(@@coreNS)
+      @@include(@@coreSS)
+      @@include(@@pageSS)
+    </style><!-- -->
+
+  </head>
+
+  <body>
+
+      <div class="container">
+          <div class="ten columns offset-by-one application">
+            <!-- TEXT HEADER -->
+            <h1 id="theme" class="textcenter lead">Framework Demo</h1>
+
+            <!-- **SECTION** -->
+            <hr class="hrclassy"/>
+            <h3 id="theme" class="textcenter lead">CSS Examples</h3>
+
+            <!-- GRID EXAMPLE -->
+            <div class="container grid-example">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Grid<h6>
+              <div class="row">
+                <div class="one column">One</div>
+                <div class="eleven columns">Eleven</div>
+              </div>
+              <div class="row">
+                <div class="two columns">Two</div>
+                <div class="ten columns">Ten</div>
+              </div>
+              <div class="row">
+                <div class="one-third column">1/3</div>
+                <div class="two-thirds column">2/3</div>
+              </div>
+              <div class="row">
+                <div class="one-half column">1/2</div>
+                <div class="one-half column">1/2</div>
+              </div>
+            </div>
+
+            <!-- BUTTONS EXAMPLE -->
+            <div class="container button-example">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Buttons<h6>
+              <div class="row">
+                <a class="button" href="#">Anchor button</a>
+                <button>Button element</button>
+                <input type="submit" value="submit input">
+              </div>
+              <div class="row">
+                <a class="button button-primary" href="#">Anchor button</a>
+                <button class="button-primary">Button element</button>
+                <input class="button-primary" type="submit" value="submit input">
+              </div>
+            </div>
+
+            <!-- FORM EXAMPLE -->
+            <form class="container">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Forms<h6>
+              <div class="row">
+                <div class="six columns">
+                  <label for="exampleEmailInput">Your email</label>
+                  <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                </div>
+                <div class="six columns">
+                  <label for="exampleRecipientInput">Reason for contacting</label>
+                  <select class="u-full-width" id="exampleRecipientInput">
+                    <option value="Option 1">Questions</option>
+                    <option value="Option 2">Concerns</option>
+                    <option value="Option 3">Callback Request</option>
+                  </select>
+                </div>
+              </div>
+              <label for="exampleMessage">Message</label>
+              <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+              <label style="float: left;">
+                <input type="checkbox">
+                <span class="label-body">Send a copy to yourself</span>
+              </label>
+              <input class="button-primary" style="float: right;" type="submit" value="Submit">
+            </form>
+
+            <!-- LIST EXAMPLE -->
+            <div class="container">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Lists</h6>
+              <div class="row">
+                <div class="six columns">
+                  <ul>
+                    <li>Unordered lists have styles</li>
+                    <li>
+                      They use the circle list style
+                      <ul>
+                        <li>Nested lists styled</li>
+                        <li>Can nest either type of list</li>
+                      </ul>
+                    </li>
+                    <li>Just more list items</li>
+                  </ul>
+                </div>
+                <div class="six columns">
+                  <ol>
+                    <li>Ordered lists also have styles</li>
+                    <li>
+                      They use the decimal list style
+                      <ul>
+                        <li>Both can be nested</li>
+                        <li>Can nest into the other</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Another one just for fun
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- CODE EXAMPLE -->
+            <div class="container">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Code</h6>
+              <!-- Note the open and close tags have to be touching content
+                   and all spaces/line-returns are replicated exactly. -->
+              <pre><code>.some-class {
+  background-color: red;
+}</code></pre>
+            </div>
+
+            <!-- TABLE EXAMPLE -->
+            <div class="container">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Tables</h6>
+              <table class="u-full-width">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dave Gamache</td>
+                    <td>26</td>
+                    <td>San Francisco</td>
+                  </tr>
+                  <tr>
+                    <td>Dwayne Johnson</td>
+                    <td>42</td>
+                    <td>Hayward</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <!-- **SECTION** -->
+            <hr class="hrclassy"/>
+            <h3 id="theme" class="textcenter lead">JS Examples</h3>
+
+            <!-- STOPLIGHT EXAMPLE -->
+            <div class="container">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Stoplight</h6>
+            	<p class="lead" style="margin-top:0px;">Click the "Cycle" button, or any of the bulbs and the light changes.</p>
+              <div class="row">
+                <div class="one-half column textcenter" style="margin-bottom: 1em;">
+                  <span>
+                  <!-- RED LIGHT -->
+                  <div class="light frame">
+                    <div class="light holder">
+                    </div>
+                    <div class="light bulb red off">
+                    </div>
+                  </div>
+                  <!-- YELLOW LIGHT -->
+                  <div class="light frame">
+                    <div class="light holder">
+                    </div>
+                    <div class="light bulb yellow off">
+                    </div>
+                  </div>
+                  <!-- GREEN LIGHT -->
+                  <div class="light frame">
+                    <div class="light holder">
+                    </div>
+                    <div class="light bulb green">
+                    </div>
+                  </div>
+                  </span>
+                </div>
+                <div class="one-half column textcenter">
+                  <button class="button-primary" id="light_cycler">Cycle</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- TABLE FERRIS WHEEL -->
+            <div class="container">
+              <hr class="hrclassy"/>
+              <h6 class="example-header">Table Row Ferris Wheel</h6>
+            	<p class="lead" style="margin-top:0px;">Click the "Cycle" button, and names on the list get rotated -
+              with new ages after they leave the top. The rows can be clicked for a greeting, as well.</p>
+              <div class="row">
+                <table class="nine columns">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                      <th>Location</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ferris_wheel">
+                    <tr>
+                      <td>Dave Gamache</td>
+                      <td>26</td>
+                      <td>San Francisco</td>
+                    </tr>
+                    <tr>
+                      <td>Susan Lane</td>
+                      <td>32</td>
+                      <td>Dallas</td>
+                    </tr>
+                    <tr>
+                      <td>Dwayne Johnson</td>
+                      <td>42</td>
+                      <td>Hayward</td>
+                    </tr>
+                    <tr>
+                      <td>Julia Smith</td>
+                      <td>21</td>
+                      <td>Boston</td>
+                    </tr>
+                  </tbody>
+                </table>
+              <div class="three columns">
+                <button class="button-primary" id="ferris_cycler">Cycle</button>
+              </div>
+              </div>
+            </div>
+
+            <hr class="hrclassy"/>
+          </div>
+      </div>
+
+    <!-- IMPORT MICRO JS FRAMEWORK -->
+    <script>
+      @@include(@@coreJS)
+    </script>
+
+  	<!-- IMPORT PAGE JS -->
+    <script>
+      @@include(@@pageJS)
+    </script>
+
+  </body>
+</html>
