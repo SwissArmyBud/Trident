@@ -1,25 +1,11 @@
-# Logs
-logs
-*.log
-npm-debug.log*
+# Normally this is uncommented, but for public access in repo leave as is
+# project/dist
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Project intermediates
+*.ms
+*.mj
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-/git**/dist
-
-# Dependency directories
+# Language leftovers
 node_modules/
-
-# Optional npm cache directory
 .npm
-
-# Package lock
 package-lock.json

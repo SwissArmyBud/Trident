@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Set meta values -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+    <!-- Title block -->
+    <title>Andrew's Resume</title>
+    <!-- Style Injection Area -->
+    <style>
+      @@include(@@coreNS)
+      @@include(@@coreSS)
+      @@include(@@pageSS)
+      .envelope{
+        background: url('data:image/svg+xml;utf8,@@include("../extras/envelope.svg")');
+      }
+      .phone{
+        background: url('data:image/svg+xml;utf8,@@include("../extras/phone.svg")');
+      }
+      .github{
+        background: url('data:image/svg+xml;utf8,@@include("../extras/github.svg")');
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="height:1em;"></div>
+    <div class="container">
+
+      <!-- START OF INTRO -->
+      <div class="row">
+        <div class="one column">
+          <div class="blob bg-green"></div>
+        </div>
+        <div class="six columns">
+          <h3 class="no-bm">Andrew Porter</h3>
+          <h5 class="no-bm tx-green">Computer Scientist</h5>
+          <p class="b no-bm">A passion for all things computing, all the time.</p>
+        </div>
+        <div class="five columns" style="text-align:right; vertical-align:middle;">
+          <div>
+            <h5 class="no-bm d-ibl v-align">831-224-8051</h5>
+            <div class="fa phone d-ibl v-align"></div>
+          </div>
+          <div>
+            <h5 class="no-bm d-ibl v-align">swissarmybud@gmail.com</h5>
+            <div class="fa envelope d-ibl v-align"></div>
+          </div>
+          <div>
+            <h5 class="no-bm d-ibl v-align">github.com/swissarmybud</h5>
+            <div class="fa github d-ibl v-align"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF INTRO -->
+
+      <hr class="slim-bm slim-tm">
+
+
+      <div class="row">
+
+        <!-- START OF EDU/WORK EXP -->
+        <div class="columns seven">
+          <h5 class="b no-bm">EDUCATION</h5>
+          <div class="row">
+            <div class="one columns">
+              <div class="blob bg-gray"></div>
+            </div>
+            <div class="eleven columns">
+              <h5 class="no-bm">CSU Monterey Bay, 2017</h5>
+              <p class="b tx-green">Bachelor's Degree in Computer Science, <i>with distinction</i></p>
+              <ul class="slim-bm">
+                <li class="tiny-bm">Double Specialization: <i>Networking & Security</i> and <i>Data Science</i></li>
+                <li class="tiny-bm">President, Association of Computing Machinery campus chapter</li>
+                <li class="tiny-bm">ETS Major Field Test - 93<sup>rd</sup> percentile versus national scores</li>
+                <li class="tiny-bm">Team leader for custom capstone - home automation hardware</li>
+              </ul>
+            </div>
+          </div>
+          <h5 class="b no-bm">WORK EXPERIENCE</h5>
+          <div class="row">
+            <div class="one columns">
+              <div class="blob bg-gray"></div>
+            </div>
+            <div class="eleven columns">
+              <h5 class="no-bm">Enterprise Holdings, 2013 - 2017</h5>
+              <p class="b tx-green">Senior Customer Service Rep</p>
+              <ul class="slim-bm">
+                <li class="tiny-bm">Cross trained across 3 of the largest vehicle rental brands in US</li>
+                <li class="tiny-bm">Key holder, supervised 5 employees and inventory worth $15 million</li>
+                <li class="tiny-bm">Theft/loss recovery and account development for flagship branch</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one columns">
+              <div class="blob bg-gray"></div>
+            </div>
+            <div class="eleven columns">
+              <h5 class="no-bm">MBay Systems, 2017 - current</h5>
+              <p class="b tx-green">Computer Systems Engineer</p>
+              <ul class="slim-bm">
+                  <li class="tiny-bm">Provide true full-stack (hardware-to-UIX) engineering for clients</li>
+                  <li class="tiny-bm">Communicate/coordinate engineering tasks with external contractors</li>
+                  <li class="tiny-bm">Act largely independently, providing functional and usable solutions</li>
+                <p class="slim-tm b">Client: Amagine Lighting</p>
+                  <li class="tiny-bm">Required ability to control lighting units without disconnecting power</li>
+                  <li class="tiny-bm">Built hardware prototypes, wrote firmware, and designed final PCB</li>
+                  <li class="tiny-bm">Delivered PCB and mobile app capable of unit control over Bluetooth</li>
+                  <li class="tiny-bm">Original units still functioning after several years in use</li>
+                <p class="slim-tm b">Client: BioFresh</p>
+                  <li class="tiny-bm">Required system capable of identifying and harvesting field produce</li>
+                  <li class="tiny-bm">Designed multi-camera unit capable of capturing 5 wavelengths & DoF</li>
+                  <li class="tiny-bm">Integrated vision system backend with HTML/JS interface for use</li>
+                  <li class="tiny-bm">Ran field trials with successful data capture and produce identification</li>
+                <p class="slim-tm b">Client: NDA Name</p>
+                  <li class="tiny-bm">Developed expertise in blockchain technologies, specifically Ethereum</li>
+                  <li class="tiny-bm">Provide services for integration of blockchain to business use-cases</li>
+                  <li class="tiny-bm">Built simple engine to help enable on-demand BlockChain-as-a-Service</li>
+                  <li class="tiny-bm">Working with NDA to launch a BCaaS global market for their products</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- END OF EDU/WORK EXP -->
+
+        <div class="columns five">
+          <h5 class="no-bm ul-green">SOFT SKILLS</h5>
+            <ul class="slim-bm skills">
+              <li class="tiny-bm">Effective and consistent communication across team</li>
+              <li class="tiny-bm">Integrate well with a variety of personality types</li>
+              <li class="tiny-bm">Quick learner and enjoy designing usable solutions</li>
+              <li class="tiny-bm">Internally motivated to perform at a high level</li>
+              <li class="tiny-bm">Capable of technical writing for variety of audiences</li>
+              <li class="tiny-bm">Willingness to accept both criticism and help</li>
+            </ul>
+          <h5 class="no-bm ul-green">HARD SKILLS</h5>
+            <ul class="slim-bm skills">
+              <li class="tiny-bm">Capable of becoming productive in new languages/frameworks/environments quickly</li>
+              <li class="tiny-bm">Focus on enabling process automation and continuous integration/build/test/deploy methodology</li>
+              <li class="tiny-bm">Ability to navigate and debug large code bases effectively, using basic tools and methods</li>
+              <li class="tiny-bm">Strong high-level understanding of networks and networking technology/topology/protocols</li>
+              <li class="tiny-bm">Good experience virtualizing resources and utilizing cloud services/providers for solutions</li>
+              <li class="tiny-bm">Software/application engineering to support "smart" conversions of hardware/devices</li>
+              <li class="tiny-bm">Hardware design and engineering, including basic EM/RF/PCB design and manufacturing</li>
+            </ul>
+          <h5 class="no-bm ul-green">LANGUAGES</h5>
+            <ul class="slim-bm solos">
+              <li class="tiny-bm bg-green">JavaScript/Node</li>
+              <li class="tiny-bm bg-green">C/C++</li>
+              <li class="tiny-bm bg-green">Java/Android</li>
+              <li class="tiny-bm bg-green">Dart/Flutter</li>
+              <li class="tiny-bm bg-green">Angular/React</li>
+              <li class="tiny-bm bg-green">Golang</li>
+              <li class="tiny-bm bg-green">Solidity</li>
+              <li class="tiny-bm bg-green">SQL/noSQL</li>
+              <li class="tiny-bm bg-green">BASH/PowerShell</li>
+              <li class="tiny-bm bg-green">Docker</li>
+            </ul>
+          <h5 class="no-bm ul-green">HOBBIES</h5>
+            <ul class="slim-bm solos outtros">
+              <li class="tiny-bm tx-green">Triathlons</li>
+              <li class="tiny-bm tx-green">Cooking</li>
+              <li class="tiny-bm tx-green">Sailing</li>
+              <li class="tiny-bm tx-green">Beekeeping</li>
+              <li class="tiny-bm tx-green">Gardening</li>
+              <li class="tiny-bm tx-green">Video Games</li>
+              <li class="tiny-bm tx-green">Woodworking</li>
+            </ul>
+          <h5 class="no-bm ul-green">REFERENCES</h5>
+            <ul class="slim-bm">
+              <li class="tiny-bm">Personal and professional references available</li>
+              <li class="tiny-bm">Phone numbers or email addresses by request</li>
+            </ul>
+        </div>
+
+      </div>
+        <!-- START OF EDU/WRK HISTORY -->
+
+        <!-- END OF EDU/WRK HISTORY -->
+        <!-- START OF SKILLS/PERSONAL -->
+
+    </div> <!-- CONTAINER -->
+
+
+    <!-- IMPORT MICRO JS FRAMEWORK -->
+    <script>
+      @@include(@@coreJS)
+    </script>
+
+  	<!-- IMPORT PAGE JS -->
+    <script>
+      @@include(@@pageJS)
+    </script>
+
+  </body>
+</html>

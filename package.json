@@ -1,25 +1,29 @@
 {
-  "name": "ESPALIF",
+  "name": "ESPALIF-Resume",
   "version": "1.0.0",
-  "description": "A build system for simple Single-Page-Applications.",
+  "description": "A build system for simple Resume.",
   "main": "./gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swissarmybud/ESPALIF.git"
+    "url": "https://github.com/swissarmybud/resume.git"
   },
   "author": "Andrew Porter <swissarmybud@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/swissarmybud/ESPALIF/issues"
+    "url": "https://github.com/swissarmybud/resume/issues"
   },
-  "homepage": "https://github.com/swissarmybud/ESPALIF",
+  "homepage": "https://github.com/swissarmybud/resume",
   "scripts": {
     "build": "gulp build",
-    "make": "gulp make",
+    "watch": "gulp watch",
     "clean": "gulp clean",
     "serve": "node ./assets/server.js"
   },
-  "devDependencies": {
+  "dependencies": {
+    "gulp-jshint": "^2.1.0",
+    "hasbin": "^1.2.3",
+    "jshint": "^2.10.2",
+    "puppeteer": "^2.0.0",
     "gulp-load-plugins": "~1.5.0",
     "gulp-preprocess": "^2.0.0",
     "gulp-rename": "^1.2.0",
@@ -31,9 +35,5 @@
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-tap": "^1.0.1"
-  },
-  "dependencies": {
-    "gulp-jshint": "^2.1.0",
-    "jshint": "^2.10.2"
   }
 }
