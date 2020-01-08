@@ -20,20 +20,23 @@
     "serve": "node ./assets/server.js"
   },
   "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-file-include": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0",
     "gulp-jshint": "^2.1.0",
-    "hasbin": "^1.2.3",
-    "jshint": "^2.10.2",
-    "puppeteer": "^2.0.0",
     "gulp-load-plugins": "~1.5.0",
     "gulp-preprocess": "^2.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-size": "~3.0.0",
+    "gulp-tap": "^1.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-file-include": "^2.0.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-clean-css": "^3.9.3",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-tap": "^1.0.1"
+    "hasbin": "^1.2.3",
+    "jshint": "^2.10.2",
+    "puppeteer": "^2.0.0"
   }
 }

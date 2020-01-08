@@ -13,6 +13,6 @@
   "rendering":{
     "window":{ "w": 1200, "h": 1300 },
     "demargin": 75,
-    "puppetScaleFactor": 4
+    "scaleFactor": 4
   }
 }

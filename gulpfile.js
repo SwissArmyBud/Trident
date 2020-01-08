@@ -26,7 +26,7 @@ const chrome = function(){
     if(hasbin.sync('chrome')){ return 'chrome'; }
     // Windows default location
     const win32 = 'C:/Program Files (x86)/Google/Chrome/Application/Chrome.exe';
-    require('fs').accessSync(win32);
+    fs.accessSync(win32);
     return win32;
   } catch (error) {
     console.log();
@@ -60,6 +60,7 @@ const buildPath = projectFolder + conf.directories.build;
 const frameworkPath = projectFolder + conf.directories.frameworks;
 const staticPath = projectFolder + conf.directories.static;
 
+// File format definitions
 const html = ".html";
 const microStyle = ".ms";
 const microScript = ".mj";
@@ -190,6 +191,10 @@ function shrinkJS() {
         showTotal: false
       })
     ).pipe(
+      $.babel({
+        presets: ['@babel/env']
+      })
+    ).pipe(
       $.uglify()
     ).pipe(
       $.rename(function (path) {
@@ -304,7 +309,7 @@ async function renderHTMLtoExternal(){
   await page.setViewport({
                   width: conf.rendering.window.w,
                   height: conf.rendering.window.h,
-                  deviceScaleFactor: conf.rendering.puppetScaleFactor
+                  deviceScaleFactor: conf.rendering.scaleFactor
               });
   // Path to dist
   // TODO - Resolve from buildPath (?)
@@ -335,6 +340,7 @@ async function renderHTMLtoExternal(){
   }
   await browser.close();
 }
+// Gulp has no problem consuming an async function
 gulp.task('render', gulp.series(renderHTMLtoExternal));
 
 gulp.task('deepClean', gulp.parallel(clean, delDist));

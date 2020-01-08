@@ -71,3 +71,7 @@ ul.solos li{
 ul.outtros li{
   border: 2px solid #004d00;
 }
+#contactBlock {
+  text-align: right;
+  vertical-align: middle;
+}
