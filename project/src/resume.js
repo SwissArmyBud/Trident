@@ -43,14 +43,14 @@ const contactBlocks = [
 ];
 // Get DOM node from string
 const getContactNode = (field) => {
-  let h = nodeOf("h5")
-         .addClass("no-bm d-ibl v-align")
-         .text(personalInfo[field]);
-  let i = nodeOf("div").addClass("fa d-ibl v-align " + field);
+  let headline = nodeOf("h5")
+                 .addClass("no-bm d-ibl v-align")
+                 .text(personalInfo[field]);
+  let icon = nodeOf("div").addClass("fa d-ibl v-align " + field);
   let node = nodeOf("div");
   // Direct append until microCash fixed
-  appendTo(h, node);
-  appendTo(i, node);
+  appendTo(headline, node);
+  appendTo(icon, node);
   return node;
 };
 // Get base div and append created nodes
@@ -91,7 +91,6 @@ const educationBlocks = [
 const getEducationNode = (field) => {
   let edNode = nodeOf(field.type).addClass(field.class);
   // Fill node
-
   if(field.type != "ul"){
     // Simple HTML
     edNode.html(field.html);
@@ -173,8 +172,8 @@ const getExperienceNode = (field) => {
   let node = nodeOf("row");
 
   // Header blob
-  let blob = nodeOf("div").addClass("one columns")
-  elTemp = nodeOf("div").addClass("blob bg-gray")
+  let blob = nodeOf("div").addClass("one columns");
+  elTemp = nodeOf("div").addClass("blob bg-gray");
   appendTo(elTemp, blob);
   appendTo(blob, node);
 
@@ -182,10 +181,10 @@ const getExperienceNode = (field) => {
   let text = nodeOf("div").addClass("eleven columns");
   // Add text header
   elTemp = nodeOf("h5").addClass("no-bm")
-                       .text(field.company + ", " + field.dates)
+                       .text(field.company + ", " + field.dates);
   appendTo(elTemp, text);
   elTemp = nodeOf("p").addClass("b tx-green")
-                      .text(field.title)
+                      .text(field.title);
   appendTo(elTemp, text);
   appendTo(text, node);
   // Start ul element
@@ -197,7 +196,7 @@ const getExperienceNode = (field) => {
   field.projects.map( (p) => {
     // Create project header and map
     elTemp = nodeOf("p").text(p.name).addClass("slim-tm b");
-    appendTo( elTemp, ul);
+    appendTo(elTemp, ul);
     p.duties.map(d => nodeOf("li").text(d).addClass("tiny-bm"))
             .map(n => appendTo(n, ul));
   });
@@ -210,7 +209,7 @@ let mapExperienceFields = (selector) => {
   experienceInfo.reverse()
                 .map(getExperienceNode)
                 .map( n => sibling[0].after(n[0]) );
-}
+};
 
 
 // *********************** SKILLS BLOCK ***********************
@@ -267,7 +266,7 @@ const skillsInfo = [
   },
   {
     title: "HOBBIES",
-    class: "solos outtros",
+    class: "solos outters",
     list: {
       class: "tx-green",
       items: [
@@ -301,9 +300,9 @@ const getNodeFromSkill = (skill) => {
   skill.list.items.map( text => nodeOf("li")
                                .addClass("tiny-bm " + skill.list.class)
                                .text(text))
-                  .map( n => list[0].appendChild(n[0]) );
-  node[0].appendChild(head[0]);
-  node[0].appendChild(list[0]);
+                  .map( n => appendTo(n, list) );
+  appendTo(head, node);
+  appendTo(list, node);
   return node;
 };
 const skillBlocks = skillsInfo.map(getNodeFromSkill);
@@ -311,16 +310,16 @@ const skillBlocks = skillsInfo.map(getNodeFromSkill);
 $(function(){
 
   // Direct append until microCash fixed
-  let piBlock = $("#personalInfo")[0];
-  piBlock.appendChild(nameBlock[0]);
-  piBlock.appendChild(contactBlock[0]);
+  let piBlock = $("#personalInfo");
+  appendTo(nameBlock, piBlock);
+  appendTo(contactBlock, piBlock);
 
-  let edBlock = $("#educationInfo")[0];
-  edBlock.appendChild(educationBlock[0]);
+  let edBlock = $("#educationInfo");
+  appendTo(educationBlock, edBlock);
 
   mapExperienceFields("#experienceInfoSibling");
 
-  let skillBlock = $("#skillsInfo")[0];
-  skillBlocks.map(n => skillBlock.appendChild(n[0]));
+  let skillBlock = $("#skillsInfo");
+  skillBlocks.map(n => appendTo(n, skillBlock) );
 
 });

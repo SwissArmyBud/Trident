@@ -1,5 +1,5 @@
 {
-  "name": "ESPALIF-Resume",
+  "name": "Trident",
   "version": "1.0.0",
   "description": "A build system for simple Resume.",
   "main": "./gulpfile.js",

@@ -36,20 +36,6 @@ const chrome = function(){
   }
 }();
 
-
-// ImageMagick Setup
-const magick = function(){
-    // User provided
-    if(conf.magickPath){ return conf.magickPath; }
-    // Linux or PATH
-    if(hasbin.sync('magick')){ return 'magick'; }
-    // TODO - No default location, per version installation requires parsing
-    console.log();
-    console.log(chalk.red("-- CAN'T FIND MAGICK - NO PDF RENDER --"));
-    console.log();
-    return undefined;
-}();
-
 // Include pathing
 const normalizeSheet = conf.frameworks.normalize;
 const styleSheet = conf.frameworks.style;
@@ -67,7 +53,7 @@ const microScript = ".mj";
 
 console.log();
 console.log();
-console.log(chalk.cyan("[ESPALIF] --> Using the following settings:"));
+console.log(chalk.cyan("[TRIDENT] --> Using the following settings:"));
 console.log();
 console.log(chalk.red("-- LOCATIONS --"));
 console.log("BAMR Source Path:", chalk.cyan(srcPath));
@@ -88,7 +74,7 @@ if(!(
   throw new Error("Parameters missing from build.conf!");
 }
 
-console.log(chalk.cyan("[ESPALIF] --> Starting gulp run:"));
+console.log(chalk.cyan("[TRIDENT] --> Starting gulp run:"));
 console.log();
 
 function craftSPA() {
@@ -294,64 +280,47 @@ function srcWatcher() {
 }
 
 // Puppeteering
-async function renderHTMLtoExternal(){
-
-  const chromeArgs = {
-    args: [`--window-size=${conf.rendering.window.w},${conf.rendering.window.h}`]
-  };
-  // If chrome bin is over-ridden go ahead and use vs installed package
-  if(chrome) chromeArgs.executablePath = chrome;
-  // Try to launch a puppet
-  let browser = await puppeteer.launch(chromeArgs);
-
-  // Get a new page handle from puppet and set correct view size/scale
-  const page = await browser.newPage();
-  await page.setViewport({
-                  width: conf.rendering.window.w,
-                  height: conf.rendering.window.h,
-                  deviceScaleFactor: conf.rendering.scaleFactor
-              });
-  // Path to dist
-  // TODO - Resolve from buildPath (?)
+async function renderAndSavePDF(){
+  // Path to dist folder
   const distPath = path.normalize(
                      path.join(
                        path.dirname(fs.realpathSync(__filename)),
                        path.join(buildPath)
                      )
                    );
-  // Path to send PNG screenshot
-  const pngPath = path.join(distPath, 'CurrentResume.png');
+  // Path to save the PDF to
+  const outputPath = path.join(distPath, 'CurrentResume.pdf');
+
+  // Chrome executable arguments - none needed as baseline
+  const chromeArgs = {};
+  // If chrome bin is over-ridden go ahead and use vs installed package
+  if(chrome) chromeArgs.executablePath = chrome;
+
+  // Try to launch a puppet
+  let browser = await puppeteer.launch(chromeArgs);
+  // Get a new page handle from puppet and set correct view size/scale
+  const page = await browser.newPage();
   // Navigate puppet to resume
   await page.goto( path.join(distPath, 'resume.html') );
-  // Take clipped screenshot of resume from puppet
-  await page.screenshot({
-                  path: pngPath,
-                  clip: {
-                      x: conf.rendering.demargin,
-                      y: 0,
-                      width: conf.rendering.window.w - ( 2 * conf.rendering.demargin ),
-                      height: conf.rendering.window.h
-                  }
-              });
-  // If we have found a conversion bin, use to create pdf
-  if(magick){
-      // iex "imagemagick inputPath outputPath"
-      await exec([magick, ...[pngPath, path.join(distPath, "CurrentResume.pdf")]].join(" "));
-  }
+  await page.pdf({
+    path: outputPath,
+    format: "letter",
+    printBackground: true,
+    scale: conf.pdfScale
+  });
   await browser.close();
 }
 // Gulp has no problem consuming an async function
-gulp.task('render', gulp.series(renderHTMLtoExternal));
+gulp.task('render', gulp.series( renderAndSavePDF ));
 
 gulp.task('deepClean', gulp.parallel(clean, delDist));
 gulp.task('make',
   gulp.series(
       gulp.series(lintJS),
       gulp.parallel(shrinkJS, shrinkCSS),
-      gulp.series(craftSPA, copySPA, copyStatic)
+      gulp.series(craftSPA, copySPA)
   )
 );
 gulp.task('build', gulp.series('deepClean', 'make', clean, 'render'));
-gulp.task('copyStatic', gulp.series(copyStatic));
 gulp.task('default', gulp.series('build'));
 gulp.task('watch', gulp.series(srcWatcher));

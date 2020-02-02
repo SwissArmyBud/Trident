@@ -2,11 +2,8 @@
   height: 4em;
   margin-top: .3em;
 }
-.bg-blue{
-  background-color: blue;
-}
 .bg-gray{
-  background-color: gray;
+  background-color: #262626;
 }
 .bg-green{
   background-color: #004d00;
@@ -68,10 +65,13 @@ ul.solos li{
   border-radius: 4px;
   font-weight: 550;
 }
-ul.outtros li{
+ul.outters li{
   border: 2px solid #004d00;
 }
 #contactBlock {
   text-align: right;
   vertical-align: middle;
+}
+.container{
+  width: 100%;
 }

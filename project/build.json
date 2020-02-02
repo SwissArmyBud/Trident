@@ -7,12 +7,7 @@
   "directories":{
     "source": "src",
     "build": "dist",
-    "frameworks": "frameworks",
-    "static": "static"
+    "frameworks": "frameworks"
   },
-  "rendering":{
-    "window":{ "w": 1200, "h": 1300 },
-    "demargin": 75,
-    "scaleFactor": 4
-  }
+  "pdfScale": 0.8
 }
