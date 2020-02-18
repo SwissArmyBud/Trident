@@ -115,7 +115,7 @@ const experienceInfo = [
   {
     company: "Enterprise Holdings",
     title: "Senior Customer Service Rep",
-    dates: "2017 - current",
+    dates: "2013 - 2017",
     duties: [
       "Cross trained across 3 of the largest vehicle rental brands in US",
       "Key holder, supervised 5 employees and inventory worth $15 million",
