@@ -12,7 +12,6 @@ const personalInfo = {
   github: "github.com/swissarmybud"
 };
 
-
 // *********************** NAME BLOCKS ***********************
 // List of name/title/tag blocks
 const nameBlocks = [
@@ -80,9 +79,8 @@ const educationBlocks = [
       class:"tiny-bm",
       items:[
         "Double Specialization: <i>Networking & Security</i> and <i>Data Science</i>",
-        "President, Association of Computing Machinery campus chapter",
         "ETS Major Field Test - 93<sup>rd</sup> percentile versus national scores",
-        "Team leader for custom capstone - home automation hardware"
+        "President, Association of Computing Machinery campus chapter",
       ]
     }
   }
@@ -117,9 +115,7 @@ const experienceInfo = [
     title: "Senior Customer Service Rep",
     dates: "2013 - 2017",
     duties: [
-      "Cross trained across 3 of the largest vehicle rental brands in US",
       "Key holder, supervised 5 employees and inventory worth $15 million",
-      "Theft/loss recovery and account development for flagship branch"
     ],
     projects: [
 
@@ -127,39 +123,57 @@ const experienceInfo = [
   },
   {
     company: "MBay Systems",
-    title: "Computer Systems Engineer",
-    dates: "2017 - current",
+    title: "Computer Systems Engineer, Full Stack",
+    dates: "2017 - 2020",
     duties: [
-      "Provide true full-stack (hardware-to-UIX) engineering for clients",
-      "Communicate/coordinate engineering tasks with external contractors",
-      "Act largely independently, providing functional and usable solutions"
     ],
     projects: [
       {
-        name: "Client: Amagine Lighting",
+        name: "Clients: Amagine Lighting & BioFresh",
         duties: [
-          "Required ability to control lighting units without disconnecting power",
           "Built hardware prototypes, wrote firmware, and designed final PCB",
-          "Delivered PCB and mobile app capable of unit control over Bluetooth",
-          "Original units still functioning after several years in use"
+          "Delivered integrated mobile app for unit control over Bluetooth",
+          "Created system capable of identifying and harvesting field produce",
+          "Designed multi-camera unit, integrated with custom HTML/JS frontend",
         ]
       },
       {
-        name: "Client: BioFresh",
+        name: "Internal",
         duties: [
-          "Required system capable of identifying and harvesting field produce",
-          "Designed multi-camera unit capable of capturing 5 wavelengths & DoF",
-          "Integrated vision system backend with HTML/JS interface for use",
-          "Ran field trials with successful data capture and produce identification"
+          "Developed systems to enable BlockChain-as-a-Service",
+          "Provided services integration of BCaaS business use-cases",
+        ]
+      },
+    ]
+  },
+  {
+    company: "CIG Insurance",
+    title: "Senior Software Engineer, Billing & Payments",
+    dates: "2020 - current",
+    duties: [
+      "Develop functionality and fix bugs in Guidewire InsuranceSuite",
+      "Maintain and support legacy applications and integrations",
+      "Onboard/mentor/train new hires and other lower level employees"
+    ],
+    projects: [
+      {
+        name: "Guidewire Billing Center, Primary Responsibility",
+        duties: [
+          "Implemented COVID relief as well as several critical business features",
+          "Lead Engineer during Billing Center upgrade from v8 to v10"
         ]
       },
       {
-        name: "Client: NDA Name",
+        name: "Production Support, Team Lead",
         duties: [
-          "Developed expertise in blockchain technologies, specifically Ethereum",
-          "Provide services for integration of blockchain to business use-cases",
-          "Built simple engine to help enable on-demand BlockChain-as-a-Service",
-          "Working with NDA to launch a BCaaS global market for their products"
+          "Led team of 6 through bug triage, patch, test, and deployment of fixes"
+        ]
+      },
+      {
+        name: "Automate Internal Software Delivery",
+        duties: [
+          "Train department on and promote use of CI/CD development methods",
+          "Use Jenkins and custom services to support no-touch deployment"
         ]
       },
     ]
@@ -241,26 +255,29 @@ const skillsInfo = [
         "Strong high-level understanding of networks and networking technology/topology/protocols",
         "Good experience virtualizing resources and utilizing cloud services/providers for solutions",
         "Software/application engineering to support \"smart\" conversions of hardware/devices",
-        "Hardware design and engineering, including basic EM/RF/PCB design and manufacturing"
+        "Hardware design and engineering, including basic PCB design and manufacturing"
       ]
     }
   },
   {
-    title: "LANGUAGES",
+    title: "LANGUAGES & PLATFORMS",
     class: "solos",
     list: {
       class: "bg-green",
       items: [
         "JavaScript/Node",
         "C/C++",
+        "C#/.NET",
         "Java/Android",
-        "Dart/Flutter",
         "Angular/React",
         "Golang",
-        "Solidity",
         "SQL/noSQL",
         "BASH/PowerShell",
-        "Docker"
+        "Git/Github",
+        "Docker",
+        "Jenkins",
+        "Kubernetes",
+        "Win/Linux"
       ]
     }
   },
@@ -287,7 +304,7 @@ const skillsInfo = [
       class: "",
       items: [
         "Personal and professional references available",
-        "Phone numbers or email addresses by request"
+        "Phone numbers & email addresses by request"
       ]
     }
   }
