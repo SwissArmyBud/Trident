@@ -173,7 +173,7 @@ const experienceInfo = [
         name: "Automate Internal Software Delivery",
         duties: [
           "Train department on and promote use of CI/CD development methods",
-          "Use Jenkins and custom services to support no-touch deployment"
+          "Use CI/CD tools and custom services to support no-touch deployment"
         ]
       },
     ]
@@ -272,11 +272,11 @@ const skillsInfo = [
         "Angular/React",
         "Golang",
         "SQL/noSQL",
-        "BASH/PowerShell",
-        "Git/Github",
         "Docker",
         "Jenkins",
         "Kubernetes",
+        "BASH/PowerShell",
+        "Git/Github",
         "Win/Linux"
       ]
     }
