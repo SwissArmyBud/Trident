@@ -5,11 +5,11 @@ const appendTo = (child, parent) => parent[0].appendChild(child[0]);
 // Personal Information for injection
 const personalInfo = {
   name: "Andrew Porter",
-  title: "Computer Scientist",
+  title: "Senior Software Engineer",
   tagline: "A passion for all things computing, all the time.",
-  envelope: "swissarmybud@gmail.com", // Short-circuit FA-Icon for *EMAIL* key
-  phone: "831-224-8051",
-  github: "github.com/swissarmybud"
+  envelope: "SwissArmyBud@gmail.com", // Short-circuit FA-Icon for *EMAIL* key
+  linkedin: "in/SwissArmyBud",
+  github: "SwissArmyBud"
 };
 
 // *********************** NAME BLOCKS ***********************
@@ -37,7 +37,7 @@ nameBlocks.map(getNameNode)
 // List of contact areas, linked to PI keys above
 const contactBlocks = [
   "envelope",
-  "phone",
+  "linkedin",
   "github"
 ];
 // Get DOM node from string
@@ -117,63 +117,64 @@ const experienceInfo = [
     duties: [
       "Key holder, supervised 5 employees and inventory worth $15 million",
     ],
-    projects: [
+    positions: [
 
     ]
   },
   {
     company: "MBay Systems",
-    title: "Computer Systems Engineer, Full Stack",
-    dates: "2017 - 2020",
+    title: "Embedded and Platform Engineer - June 2021",
+    dates: "2017 - current",
     duties: [
+
     ],
-    projects: [
+    positions: [
       {
-        name: "Clients: Amagine Lighting & BioFresh",
+        name: "Platform Engineer - July 2021",
         duties: [
-          "Built hardware prototypes, wrote firmware, and designed final PCB",
-          "Delivered integrated mobile app for unit control over Bluetooth",
-          "Created system capable of identifying and harvesting field produce",
-          "Designed multi-camera unit, integrated with custom HTML/JS frontend",
+          "Leverage DevOps to provide cloud-backed Platform-as-a-Service",
+          "Use cloud native technologies to provide non-opinionated solutions",
         ]
       },
       {
-        name: "Internal",
+        name: "Software Engineer - October 2017",
         duties: [
-          "Developed systems to enable BlockChain-as-a-Service",
-          "Provided services integration of BCaaS business use-cases",
+          "Responsible for implementing and customizing software solutions",
+        ]
+      },
+      {
+        name: "Embedded Systems Engineer - January 2017",
+        duties: [
+          "Responsible for establishing \"first-light\" on new embedded systems",
+          "Built hardware prototypes, wrote firmware, and designed final PCBs",
+          "Production hardened platforms ready for deployments to Edge networks",
         ]
       },
     ]
   },
   {
-    company: "CIG Insurance",
-    title: "Senior Software Engineer, Billing & Payments",
+    company: "Capital Insurance Group",
+    title: "Senior Software Engineer, Billing & Payments - March 2021",
     dates: "2020 - current",
     duties: [
       "Develop functionality and fix bugs in Guidewire InsuranceSuite",
-      "Maintain and support legacy applications and integrations",
-      "Onboard/mentor/train new hires and other lower level employees"
+      "Responsible for $500MM of incoming, $100MM of outgoing payments",
+      "Improve or create DevOps approaches for all of CIG's applications",
+      "Onboard, mentor, crosstrain both new hires and current engineers"
     ],
-    projects: [
+    positions: [
       {
-        name: "Guidewire Billing Center, Primary Responsibility",
+        name: "Team Lead, Production Support - Nov 2020",
         duties: [
-          "Implemented COVID relief as well as several critical business features",
-          "Lead Engineer during Billing Center upgrade from v8 to v10"
+          "Led team of 6 through bug triage, patch, test, and deployment of fixes",
+          "Direct responsibility for Billing Center and Internal Payment Solutions"
         ]
       },
       {
-        name: "Production Support, Team Lead",
+        name: "Software Engineer, Billing & Payments - March 2020",
         duties: [
-          "Led team of 6 through bug triage, patch, test, and deployment of fixes"
-        ]
-      },
-      {
-        name: "Automate Internal Software Delivery",
-        duties: [
-          "Train department on and promote use of CI/CD development methods",
-          "Use CI/CD tools and custom services to support no-touch deployment"
+          "Implemented D.O.I. compliant COVID relief in Guidewire Billing Center",
+          "Also performed feature development on Policy Center and Legacy apps"
         ]
       },
     ]
@@ -206,9 +207,9 @@ const getExperienceNode = (field) => {
   // Map all top-level duties into list
   field.duties.map( d => nodeOf('li').text(d).addClass("tiny-bm") )
               .map(n => appendTo(n, ul));
-  // Push projects into list with headers
-  field.projects.map( (p) => {
-    // Create project header and map
+  // Push positions into list with headers
+  field.positions.map( (p) => {
+    // Create positions header and map
     elTemp = nodeOf("p").text(p.name).addClass("slim-tm b");
     appendTo(elTemp, ul);
     p.duties.map(d => nodeOf("li").text(d).addClass("tiny-bm"))
@@ -220,9 +221,9 @@ const getExperienceNode = (field) => {
 let experienceBlock;
 let mapExperienceFields = (selector) => {
   let sibling = $(selector);
-  experienceInfo.reverse()
-                .map(getExperienceNode)
-                .map( n => sibling[0].after(n[0]) );
+  experienceInfo
+    .map(getExperienceNode)
+    .map( n => sibling[0].after(n[0]) );
 };
 
 
@@ -234,12 +235,11 @@ const skillsInfo = [
     list: {
       class: "",
       items: [
-        "Effective and consistent communication across team",
-        "Integrate well with a variety of personality types",
-        "Quick learner and enjoy designing usable solutions",
         "Internally motivated to perform at a high level",
-        "Capable of technical writing for variety of audiences",
-        "Willingness to accept both criticism and help"
+        "Quick learner and enjoy designing usable solutions",
+        "Willingness to accept both criticism and help",
+        "Effective and consistent communication across teams",
+        "Capable of technical writing for variety of audiences"
       ]
     }
   },
@@ -249,11 +249,13 @@ const skillsInfo = [
     list: {
       class: "",
       items: [
-        "Capable of becoming productive in new languages/frameworks/environments quickly",
-        "Focus on enabling process automation and continuous integration/build/test/deploy methodology",
+        "Capable of quickly becoming productive in new languages, frameworks, and environments",
+        "Focus on enabling continuous integration for low-friction build/test/deploy workflows",
         "Ability to navigate and debug large code bases effectively, using basic tools and methods",
         "Strong high-level understanding of networks and networking technology/topology/protocols",
+        "History of performing strongly when a member of a team or when serving in a leadership role",
         "Good experience virtualizing resources and utilizing cloud services/providers for solutions",
+        "Leveraging DevOps to reduce team bandwidth requirements for the build/test/deploy chain",
         "Software/application engineering to support \"smart\" conversions of hardware/devices",
         "Hardware design and engineering, including basic PCB design and manufacturing"
       ]
@@ -272,28 +274,19 @@ const skillsInfo = [
         "Angular/React",
         "Golang",
         "SQL/noSQL",
-        "Docker",
+        "DevOps",
         "Jenkins",
+        "Docker",
         "Kubernetes",
+        "Terraform",
+        "Ansible",
+        "Rancher",
         "BASH/PowerShell",
         "Git/Github",
-        "Win/Linux"
-      ]
-    }
-  },
-  {
-    title: "HOBBIES",
-    class: "solos outters",
-    list: {
-      class: "tx-green",
-      items: [
-        "Triathlons",
-        "Cooking",
-        "Sailing",
-        "Beekeeping",
-        "Gardening",
-        "Video Games",
-        "Woodworking"
+        "Win/Linux",
+        "Nginx/httpd",
+        "AWS/S3",
+        "DigitalOcean"
       ]
     }
   },
@@ -303,8 +296,8 @@ const skillsInfo = [
     list: {
       class: "",
       items: [
-        "Personal and professional references available",
-        "Phone numbers & email addresses by request"
+        "Personal and professional references available.",
+        "Phone numbers & email addresses by request."
       ]
     }
   }
@@ -331,10 +324,10 @@ $(function(){
   appendTo(nameBlock, piBlock);
   appendTo(contactBlock, piBlock);
 
+  mapExperienceFields("#experienceInfoSibling");
+
   let edBlock = $("#educationInfo");
   appendTo(educationBlock, edBlock);
-
-  mapExperienceFields("#experienceInfoSibling");
 
   let skillBlock = $("#skillsInfo");
   skillBlocks.map(n => appendTo(n, skillBlock) );

@@ -289,7 +289,7 @@ async function renderAndSavePDF(){
                      )
                    );
   // Path to save the PDF to
-  const outputPath = path.join(distPath, 'CurrentResume.pdf');
+  const outputPath = path.join(distPath, 'AndrewPorter-Resume.pdf');
 
   // Chrome executable arguments - none needed as baseline
   const chromeArgs = {};

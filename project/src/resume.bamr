@@ -18,8 +18,8 @@
       .envelope{
         background: url('data:image/svg+xml;utf8,@@include("../extras/envelope.svg")');
       }
-      .phone{
-        background: url('data:image/svg+xml;utf8,@@include("../extras/phone.svg")');
+      .linkedin{
+        background: url('data:image/svg+xml;utf8,@@include("../extras/linkedin.svg")');
       }
       .github{
         background: url('data:image/svg+xml;utf8,@@include("../extras/github.svg")');
@@ -49,6 +49,10 @@
         <!-- START OF EDU/WORK EXP -->
         <div class="columns seven">
 
+          <h5 class="b no-bm" id="experienceInfoSibling">WORK EXPERIENCE</h5>
+          
+          <!-- **INJECTION AREA** -->
+
           <h5 class="b no-bm">EDUCATION</h5>
 
           <div class="row" id="educationInfo">
@@ -59,10 +63,6 @@
             <!-- **INJECTION AREA** -->
 
           </div>
-
-          <h5 class="b no-bm" id="experienceInfoSibling">WORK EXPERIENCE</h5>
-
-          <!-- **INJECTION AREA** -->
 
         </div>
         <!-- END OF EDU/WORK EXP -->
