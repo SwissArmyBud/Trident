@@ -5,11 +5,11 @@ const appendTo = (child, parent) => parent[0].appendChild(child[0]);
 // Personal Information for injection
 const personalInfo = {
   name: "Andrew Porter",
-  title: "Senior Software Engineer",
+  title: "Software Engineer",
   tagline: "A passion for all things computing, all the time.",
   envelope: "SwissArmyBud@gmail.com", // Short-circuit FA-Icon for *EMAIL* key
-  linkedin: "in/SwissArmyBud",
-  github: "SwissArmyBud"
+  linkedin: "linkedin.com/SwissArmyBud",
+  github: "github.com/SwissArmyBud"
 };
 
 // *********************** NAME BLOCKS ***********************
@@ -110,32 +110,23 @@ educationBlocks.map(getEducationNode)
 
 // *********************** EXPERIENCE BLOCK ***********************
 const experienceInfo = [
-  {
-    company: "Enterprise Holdings",
-    title: "Senior Customer Service Rep",
-    dates: "2013 - 2017",
-    duties: [
-      "Key holder, supervised 5 employees and inventory worth $15 million",
-    ],
-    positions: [
-
-    ]
-  },
+  // {
+  //   company: "Enterprise Holdings",
+  //   title: "Senior Customer Service Rep",
+  //   dates: "2013 - 2017",
+  //   duties: [
+  //     "Key holder, supervised 5 employees and inventory worth $15 million",
+  //   ],
+  //   positions: [ ]
+  // },
   {
     company: "MBay Systems",
-    title: "Embedded and Platform Engineer - June 2021",
-    dates: "2017 - current",
+    title: "Platform Engineer - June 2021",
+    dates: "2017 - 2021",
     duties: [
-
+      "Leverage DevOps to provide cloud-native Platform-as-a-Service",
     ],
     positions: [
-      {
-        name: "Platform Engineer - July 2021",
-        duties: [
-          "Leverage DevOps to provide cloud-backed Platform-as-a-Service",
-          "Use cloud native technologies to provide non-opinionated solutions",
-        ]
-      },
       {
         name: "Software Engineer - October 2017",
         duties: [
@@ -147,7 +138,7 @@ const experienceInfo = [
         duties: [
           "Responsible for establishing \"first-light\" on new embedded systems",
           "Built hardware prototypes, wrote firmware, and designed final PCBs",
-          "Production hardened platforms ready for deployments to Edge networks",
+          // "Production hardened platforms for deployments to Edge networks",
         ]
       },
     ]
@@ -155,16 +146,16 @@ const experienceInfo = [
   {
     company: "Capital Insurance Group",
     title: "Senior Software Engineer, Billing & Payments - March 2021",
-    dates: "2020 - current",
+    dates: "2020 - 2022",
     duties: [
       "Develop functionality and fix bugs in Guidewire InsuranceSuite",
       "Responsible for $500MM of incoming, $100MM of outgoing payments",
-      "Improve or create DevOps approaches for all of CIG's applications",
+      "Create or improve DevOps approaches for all of CIG's applications",
       "Onboard, mentor, crosstrain both new hires and current engineers"
     ],
     positions: [
       {
-        name: "Team Lead, Production Support - Nov 2020",
+        name: "Team Lead, Billing & Payments Production Support - Nov 2020",
         duties: [
           "Led team of 6 through bug triage, patch, test, and deployment of fixes",
           "Direct responsibility for Billing Center and Internal Payment Solutions"
@@ -174,10 +165,22 @@ const experienceInfo = [
         name: "Software Engineer, Billing & Payments - March 2020",
         duties: [
           "Implemented D.O.I. compliant COVID relief in Guidewire Billing Center",
-          "Also performed feature development on Policy Center and Legacy apps"
+          // "Also performed feature development on Policy Center and Legacy apps"
         ]
       },
     ]
+  },
+  {
+    company: "Autodesk",
+    title: "Senior Software Engineer, Platform Services - September 2022",
+    dates: "2022 - current",
+    duties: [
+      "Tech Lead on greenfield highly-customized Backstage implementation, for an Internal Developer Portal with 5000+ users across the company",
+      "Internship mentor and cross-trained internal IDP contributor teams",
+      "Owned & maintained high volume Tier-2 API in Autodesk Platform Services at \"four nines\" across 3 commercial geo-regions plus FedRAMP",
+      "Contributed to Developer Enablement tooling & systems across APS"
+    ],
+    positions: [ ]
   }
 ];
 const getExperienceNode = (field) => {
@@ -267,10 +270,10 @@ const skillsInfo = [
     list: {
       class: "bg-green",
       items: [
-        "JavaScript/Node",
+        "JavaScript/NodeJS",
         "C/C++",
         "C#/.NET",
-        "Java/Android",
+        "Java/Springboot",
         "Angular/React",
         "Golang",
         "SQL/noSQL",
@@ -280,13 +283,13 @@ const skillsInfo = [
         "Kubernetes",
         "Terraform",
         "Ansible",
-        "Rancher",
+        "Backstage",
         "BASH/PowerShell",
         "Git/Github",
         "Win/Linux",
-        "Nginx/httpd",
-        "AWS/S3",
-        "DigitalOcean"
+        "AWS/Azure",
+        "DigitalOcean",
+        "Cloudflare"
       ]
     }
   },

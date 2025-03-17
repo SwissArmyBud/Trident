@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A build system for simple Resume.",
   "main": "./gulpfile.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/swissarmybud/resume.git"
@@ -20,23 +21,24 @@
     "serve": "node ./assets/server.js"
   },
   "dependencies": {
-    "@babel/core": "^7.7.7",
-    "@babel/preset-env": "^7.7.7",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^3.9.3",
-    "gulp-file-include": "^2.0.1",
-    "gulp-htmlmin": "^4.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-jshint": "^2.1.0",
-    "gulp-load-plugins": "~1.5.0",
-    "gulp-preprocess": "^2.0.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-size": "~3.0.0",
-    "gulp-tap": "^1.0.1",
-    "gulp-uglify": "^3.0.0",
+    "gulp-load-plugins": "~2.0.8",
+    "gulp-preprocess": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-size": "~5.0.0",
+    "gulp-tap": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
     "hasbin": "^1.2.3",
-    "jshint": "^2.10.2",
-    "puppeteer": "^2.0.0"
+    "jshint": "^2.13.6",
+    "puppeteer": "^24.4.0"
   }
 }
